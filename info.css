@@ -1,0 +1,315 @@
+/*
+
+//selectors (body) Determine which HTML element to apply style to
+
+body {
+    declaration blocks. Declaration are style rules written in property:value; pairs
+}
+
+
+
+
+//use class and ID attributes to attach extra attributes to HTML elements
+class can be used multiple times
+ID can be used only once
+
+.classname{
+
+}
+
+#id {
+
+}
+
+//descendent selectors 
+
+<section>
+    <p> paragraph with a <a href="#"> link </a>. </p>
+
+</section>
+
+section p a{
+    color: red;
+}
+
+
+//grouping multiple selectors
+
+h1, h2, h3 {
+
+}
+
+//pseudo class selectors
+
+used to targe a specific state of an element . keywords combined with another selector, using a colon.
+a:hover{
+    color:black;
+}
+
+<a href - "http://website.com"> link </a>
+
+a {
+  background: purple;
+  padding: 6px;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  background: lightblue;
+}
+a:active {
+  border: 1px solid black;
+}
+a:hover {
+  background: none;
+}
+p:hover {
+  background: white;
+}
+a:focus,
+input:focus {
+  outline: 1px solid black;
+}
+
+***********************
+/*type selectors guidelines
+use type selectors when all elements of a type are needed changed
+
+//use CLASS SELECTORS when more specific styles are to be applied to different elements, one or more times per page
+.highlighted {
+    color: red;
+}
+
+//use ID SELECTORS for unique or global styles that are not repeated.
+ID selectors can also be used for in-page linking (clicking a link in a page that takes you to another place in the same page, same jump to top buttons in some sites)
+
+//use DECSENDENT SELECTORS to apply styles to an element, based on its parent or ancestor element. Don't go more than three levels deep, makes page loading slower
+
+
+/************************
+Color values css.
+
+color:#000000; (hash followed by 6 zero's 0-9, A-F)
+
+or
+
+color:rgb(0,0,0);    -----> 0-255 values 
+
+go to colours.neilorangepeel.com for color codes
+
+also https://randoma11y.com for color, background/text contrast
+
+#301654: Purple
+*****************
+//CSS inheritance: styles can be inherited from ancestor to descendant elements. 
+Howerever not all properties will be inherited by all elements.
+
+
+//PRecedence in styles: Specificity determines which CSS rule takes precedence for selectors. 
+The selector with higher specificity will be applied.
+
+Type selectors lowes (h1), class next, ID highest specificity
+cssspecificity.com
+
+******************Typography
+//Web fonts. Use internal or external source
+Go to https://css-tricks.com/snippets/css/using-font-face/   on info on using font face.
+
+there are different units for specifying the font size. Relative values are calculated based on the nearest ancestor element.
+Absolute values are not affected by ancestor elements. Both relative and absolute font sizes are inherited.
+
+Font size measured using: px (pixels) Browser default = 16 px.
+em: Relative unit. 1 em = inherited font-size
+rem = Relative unit only to the root element. 1 rem = 1 em = default 
+
+font-weight: can change font boldness, called font weight.
+
+font style :  used to add italics to fonts. three values: italic, oblique and normal
+    font-style: normal; italic; Check mozilla developer reference for more font properties.
+
+more properties:
+line-height: sets the height of the space between two lines of text. Can take px, %, ems, rems or unitless.
+
+
+text-decoration: overline; underline; line-through; none;
+text-transform: Capitalize; UPPERCASE; lowercase; none;
+text-align: center;
+
+https://goo.gl/XqpycD CSS properties site
+
+
+
+************************
+//two types of HTML Elements -- Block Level and Inline elements. Defines how elements are displayed on a webpage
+Block level elements same height as the content contained within the element, but they span the entire line width of the container. 
+That's why elements start on a new line.
+Block elements can wrap other block and inline elements  <div> <p> <h1> are block elements.
+
+INline elements are just the height and width of their content (the phrases inside their tags). Left-aligned.
+Not allowed to nest block elements inside inline elements. Except <a> tags in HTML5
+<a> <span> <strong> tags are inline
+
+Way to check between the two: add background color to it, if it stretches all the way to the end it's a block element, otherwise it's a inline element.
+property 
+display:inline-block; (for when inline elements need to be edited, height and width, like block elements)
+
+*****************************
+//The HTML Box model
+
+Box model properties . See CSS.png
+Length values are also used for box model.
+
+Height and width:
+
+Padding longhand :
+
+padding-top: 2px;
+padding-right: 2px;
+padding-bottom: 2px;
+padding-left: 2px;
+
+Padding shrot hand:
+padding: 2px 2px 2px 2px; //top right bottom left (clockwise)
+
+padding: 2px; //same on all sides
+padding: 2px 10px;  //top & bottom, right & left
+padding: 2px 10px 5px; //top, right & left, bottom
+
+Mix and match different types of values:
+padding: 10px 2%;
+
+Border styles too. Check the mozilla developer network. 
+
+
+
+
+************************
+Floats
+Disrupts the natural flow of the page.
+Property
+clear: both; //clears any left or right float. For <h> or <p> tags. Must be cleared to return to the natural page flow.
+
+self-clearing floats: 
+overflow: hidden; auto;
+
+For self-clearing floats, another fix is a "clearfix" CSS Snippet added to the parent of floated elements
+.clearfix:after{
+
+}
+
+*********************
+//Box model
+Width, height, padding, and border all contribute to the toal size of an element. Margin adds space around the element but does not affect its size
+
+
+Add this snippet to projects. Find it at paulirish.com
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+//Type selectors advanced. Pseudo element selectors (targets parts of the HTML element). 
+check mozilla network for more info. Check codedrops for data types and css properties.
+
+****************
+Position: Used to arrange elements relative to the default page flow or browser viewport. Five values: relative, absolute, fixed, static & inherit
+Pretty difficult. Look it up in codedrops.
+
+************************W
+layers and the z-index property.
+Z-index allows us to overwrite the default (stacking order)layer property of other HTML elements. Position property must be contained within selector to use z-index.
+
+
+******************
+Reset StyleSheet
+Prewritten stylesheet containing rules that override all the default browser styles to an un-styled baseline
+
+Normalize
+Prewritten stylesheet containing rules that aim to create consistent default styles, rather than removing them
+
+
+Font Icons; fontawesome.com
+
+
+
+***********************
+Responsive design: For multiple devices. check www.mediaqueri.es for design inspiration and how other sites manage designs across multiple devices.
+Also www.liquidapsive.com
+
+
+**********MAX WIDTH PROPERTY************88
+Used max-width property to span the container (document, screen, site) so when the browser is resized the site adjusts accordingly. 
+Does not remain the same size and brings out a scroll bar to sift through the resized page.
+
+
+
+************************
+Grid layout for webpages
+12 column grid with equally spaced gutters.
+ gridcalculator.dk
+
+//initiates grid based css properties. gridbyexample.com
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 175px;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  grid-gap: 10px;
+}
+
+
+
+*************Flex box layout*****************
+.flex-container {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+
+
+IMAGES. Raster or Vector
+SVG - Scalable vector graphics. Scales up and down without losing quality. For 2d shapes, icons and illustrations. Based on XML.
+used nounproject for icons
+
+
+*******CSS3, Animation*********************
+https://goo.gl/KXcy3U
+transition {
+
+}
+
+
+********CSS Shapes***********
+https://goo.gl/BLkwXn
+
+shape-outside: circle();
+clip-path: circle();
+
+Customize shapes. Shape functions
+shape-outside: circle(100px at 0% 50%) // circle(radius at horiz-pos vert-pos)
+
+
+*********REsponsive Typography************
+USe pixels as a starter. NExt relative units (rem, em and %)
+1 rem = 16 px;
+rem is relative only to the root element. em and % is relative to the font-szie decalared in nearest ancestor element.
+Set fonts and texts for phones and as pcs. Use varying for different screen sizes.
+
+***Fluid typography*************
+viewport units: vw, vh, vmin, vmax (Size of the browsers window)
+https://goo.gl/KpjPnB
+
+
+
+
+
+*/
+
