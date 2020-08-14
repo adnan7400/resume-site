@@ -1,4 +1,3 @@
-
 /* color for this project
 https://goo.gl/SZ7cdD
 
@@ -8,46 +7,49 @@ https://goo.gl/SZ7cdD
 #EF233C RED(Pantone)
 #D90429 Medium Candy Apple Red
 #301654: Purple
+color: #e81a79;
 */
 
 /*Global styles
 *************************/
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
 }
-h1, h2 {
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
+h1,
+h2 {
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
 }
-h1{
-    font-size: 60px;
+h1 {
+  font-size: 60px;
 }
-h2{
-    font-size: 40px;
-    margin-top: 0;
+h2 {
+  font-size: 40px;
+  margin-top: 0;
 }
-h3{
-    margin:0;
+h3 {
+  margin: 0;
 }
 a {
-    color: #EF233C;
+  color: #ef233c;
 }
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
-.content-wrap{
-
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 60px 50px;
-    overflow: auto;
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  overflow: auto;
 }
 /*.col-narrow{
     width: 30%;
@@ -71,159 +73,172 @@ a:hover {
     
 }
 */
-.uppercase{
-    text-transform: uppercase;
+u {
+  color: white;
+}
+li {
+  color: white;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 /*Download Button*/
-.button{
-    text-decoration: none;
-    background: #EF233C;
-    color: white;
-    padding: 10px;
-    display: inline-block;
+.button {
+  text-decoration: none;
+  background: #ef233c;
+  color: white;
+  padding: 10px;
+  display: inline-block;
 }
-.coloroverride{
-    color:black;
+.coloroverride {
+  color: white;
 }
 /*Header and Footer Styles
 *************************/
 
-header, footer{
-    background: #0f0021;
-    color: #e81a79;
+header,
+footer {
+  background: #0f0021;
+  color: #e81a79;
 }
-header{
-    padding-top: 50px;
-    position: relative;
+header {
+  padding-top: 50px;
+  position: relative;
 }
 /* Header */
-header h1, header h2{
-    color:#EDF2F4;
-    margin:0;
+header h1,
+header h2 {
+  color: #e81a79;
+  margin: 0;
 }
-.profile-img{
-    border-radius: 50%;
-    margin-top: 70px;    
+.profile-img {
+  border-radius: 50%;
+  margin-top: 70px;
 }
-.download{
-    position:absolute;
-    bottom:0;
-    right:0;
+.download {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.objective {
+  color: white;
 }
 
 /* Footer */
-footer{
-    text-align: center;
+footer {
+  text-align: center;
 }
 .contact-info a {
-    padding: 12px;
-    color: #e81a79;
-    display: inline-block;
+  padding: 12px;
+  color: #e81a79;
+  display: inline-block;
 }
-.fa-github{
-    font-size: 40px;
+.fa-github {
+  font-size: 40px;
 }
-.fa-linkedin{
-    font-size: 40px;
+.fa-linkedin {
+  font-size: 40px;
 }
-.fa-facebook{
-    font-size: 40px;
+.fa-facebook {
+  font-size: 40px;
 }
 /*Navigation styles
 *************************/
-nav{
-    text-align: center;
-    background: white;
-    position: fixed;
-    top:0;
-    width: 100%;
+nav {
+  text-align: center;
+  background: #0f0021;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 nav a {
-    display: inline-block;
-    padding: 15px 10px;
-    text-decoration:none;
-    text-transform: uppercase;
-    font-weight: 700;
+  display: inline-block;
+  padding: 15px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #e81a79;
 }
 
 /*Work Experience
 *************************/
-.work{
-    background: #301654;
-    color: white;
+.work {
+  background: #14091f;
+  color: white;
 }
-h3 ~ p{
-    margin:0;
+
+h3 ~ p {
+  margin: 0;
+  color: #e81a79;
 }
-.project-description{
-    margin-bottom: 25px;
+.project-description {
+  margin-bottom: 25px;
 }
-.project-description li:first-of-type{
-    margin-top: 10px;
+.project-description li:first-of-type {
+  margin-top: 10px;
 }
 /*Other Work Experience
 *************************/
-.tempwork{
-    background: #EDF2F4;
+.tempwork {
+  background: #0f0021;
+  color: white;
 }
 
 /*Education, Awards and Interests
 ***********************************/
-.education{
-     /* sets gradient and image */
-  background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141,153,174, 0.5)),
-              url(../images/test1.png) no-repeat fixed;   
-  background-size:cover;
+.education {
+  /* sets gradient and image */
+  background: linear-gradient(
+      rgba(141, 153, 174, 0.8),
+      rgba(141, 153, 174, 0.5)
+    ),
+    url(../images/test1.png) no-repeat fixed;
+  background-size: cover;
 }
 
 h2 + h3:first-of-type {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-h3 + ul{
-    margin-top: 0;
-}
-
-.interests{
-    background: #301654;
-    color: white;
+h3 + ul {
+  margin-top: 0;
 }
 
+.interests {
+  background: #14091f;
+  color: white;
+}
 
 /*Media Queries
 ****************/
-@media(min-width: 900px){
-    .col-narrow{
-        width: 30%;
-        float: left;
-        margin-top: 10px;
-        /* border: 1px solid black; */    
-        color: #d6a407;
-    }
-    .col-narrow2{
-        width: 30%;
-        float: left;
-        margin-top: 10px;
-        /* border: 1px solid black; */    
-        color: black;
-    }
-    .col-wide{
-        width: 70%;
-        float: left;
-        padding-left: 30px;
-        /* border: 1px solid black; */
-        
-    }
+@media (min-width: 900px) {
+  .col-narrow {
+    width: 30%;
+    float: left;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+    color: #0f0021;
+  }
+  .col-narrow2 {
+    width: 30%;
+    float: left;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+    color: black;
+  }
+  .col-wide {
+    width: 70%;
+    float: left;
+    padding-left: 30px;
+    /* border: 1px solid black; */
+  }
 }
 
-@media (max-width:899px){
-    header{
-        text-align:center;
-    }
-    .profile-img{
-        width:200px;
-    }
+@media (max-width: 899px) {
+  header {
+    text-align: center;
+  }
+  .profile-img {
+    width: 200px;
+  }
 }
-
-
-
-
