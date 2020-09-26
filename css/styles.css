@@ -185,6 +185,10 @@ h3 ~ p {
   color: white;
 }
 
+.subtitle {
+  color: #e81a79;
+}
+
 /*Education, Awards and Interests
 ***********************************/
 .education {
